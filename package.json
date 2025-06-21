@@ -1,0 +1,33 @@
+{
+  "name": "selectorjs",
+  "title": "SelectorJS",
+  "version": "1.0.0",
+  "description": "A lightweight, chainable JavaScript utility for DOM selection and manipulation.",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hanyangzhoupiano/tools.git"
+  },
+  "keywords": [
+    "javascript",
+    "dom",
+    "wrapper",
+    "selector",
+    "utility",
+    "chainable",
+    "vanilla-js",
+    "micro-library"
+  ],
+  "author": "hanyangzhou",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hanyangzhoupiano/tools/issues"
+  },
+  "homepage": "https://github.com/hanyangzhoupiano/tools#readme",
+  "files": [
+    "main.js"
+  ]
+}
