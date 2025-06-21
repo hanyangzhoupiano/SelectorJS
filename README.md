@@ -7,7 +7,13 @@
 To use jSelector in your code, include it via CDN:
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/jselector@1.0.0/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jselector@latest/main.js"></script>
+```
+
+To install a specific version:
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/jselector@1.2.0/main.js"></script>
 ```
 
 ## Documentation
