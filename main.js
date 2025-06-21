@@ -68,4 +68,24 @@ class $Wrapper {
     }
 }
 
-const $ = (selector) => new $Wrapper(selector);
+function $(selector) {
+    const wrapper = new $Wrapper(selector);
+    return new Proxy(wrapper, {
+        get(target, prop) {
+            if (prop in target) return target[prop];
+            if (!isNaN(prop)) return target.elements[prop];
+            if (target.elements.length === 1 && prop in target.elements[0]) return target.elements[0][prop];
+            if (target.elements.length > 1 && prop in target.elements) return target.elements[prop];
+            
+            return undefined;
+        },
+        set(target, prop, value) {
+            if (!isNaN(prop)) {
+                target.elements[prop] = value;
+                return true;
+            }
+            target[prop] = value;
+            return true;
+        }
+    });
+}
