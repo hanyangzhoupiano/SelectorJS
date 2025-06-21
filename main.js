@@ -11,6 +11,38 @@ class $Wrapper {
         }
     }
 
+    html(content) {
+        if (content === undefined) {
+            return this.elements.map(el => el.innerHTML);
+        }
+        this.elements.forEach(el => el.innerHTML = content);
+        return this;
+    }
+
+    css(attr, value) {
+        if (value === undefined) {
+            return this.elements[0]?.style[attr] || getComputedStyle(this.elements[0])[attr];
+        }
+        this.elements.forEach(el => el.style[attr] = value);
+        return this;
+    }
+
+    text(content) {
+        if (content === undefined) {
+            return this.elements.map(el => el.textContent);
+        }
+        this.elements.forEach(el => el.textContent = content);
+        return this;
+    }
+
+    attr(name, value) {
+        if (value === undefined) {
+            return this.elements.map(el => el.getAttribute(name));
+        }
+        this.elements.forEach(el => el.setAttribute(name, value));
+        return this;
+    }
+
     on(events, callback) {
         this.elements.forEach(el =>
             events.split(" ").forEach(evt => el.addEventListener(evt, callback))
@@ -21,30 +53,6 @@ class $Wrapper {
     each(callback) {
         this.elements.forEach((el, i) => callback.call(el, i, el));
         return this;
-    }
-
-    css(attr, value) {
-        this.elements.forEach(el => el.style[attr] = value);
-        return this;
-    }
-
-    html(content) {
-        this.elements.forEach(el => el.innerHTML = content);
-        return this;
-    }
-
-    text(content) {
-        this.elements.forEach(el => el.textContent = content);
-        return this;
-    }
-
-    attr(name, value) {
-        if (value !== undefined) {
-            this.elements.forEach(el => el.setAttribute(name, value));
-            return this;
-        } else {
-            return this.elements.map(el => el.getAttribute(name));
-        }
     }
 
     addClass(name) {
