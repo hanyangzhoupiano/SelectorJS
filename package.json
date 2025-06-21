@@ -1,7 +1,7 @@
 {
-  "name": "jselector",
+  "name": "@hanyangzhou/jselector",
   "title": "jSelector",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "A lightweight, chainable JavaScript utility for DOM selection and manipulation.",
   "main": "main.js",
   "scripts": {
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hanyangzhoupiano/tools.git"
+    "url": "git+https://github.com/hanyangzhoupiano/jSelector.git"
   },
   "keywords": [
     "javascript",
@@ -24,9 +24,9 @@
   "author": "hanyangzhou",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/hanyangzhoupiano/tools/issues"
+    "url": "https://github.com/hanyangzhoupiano/jSelector/issues"
   },
-  "homepage": "https://github.com/hanyangzhoupiano/tools#readme",
+  "homepage": "https://github.com/hanyangzhoupiano/jSelector#readme",
   "files": [
     "main.js",
     "README.md"
