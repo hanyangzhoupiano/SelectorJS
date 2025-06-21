@@ -1,14 +1,14 @@
 class jSelector {
-    constructor(input) {
-        if (typeof input === "string") {
-            this.elements = Array.from(document.querySelectorAll(input));
-        } else if (input instanceof Element) {
-            this.elements = [input];
-        } else if (input instanceof NodeList || Array.isArray(input)) {
-            this.elements = Array.from(input);
-        } else {
-            this.elements = [];
-        }
+    constructor(elements) {
+        this.elements = Array.from(elements);
+        return new Proxy(this, {
+            get(target, prop) {
+                if (prop in target) return target[prop];
+                const el = target.elements[0];
+                const val = el?.[prop];
+                return typeof val === "function" ? val.bind(el) : val;
+            }
+        });
     }
 
     html(content) {
