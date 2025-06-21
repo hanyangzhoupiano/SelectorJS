@@ -1,4 +1,4 @@
-class Selector {
+class jSelector {
     constructor(input) {
         if (typeof input === "string") {
             this.elements = Array.from(document.querySelectorAll(input));
@@ -72,12 +72,12 @@ class Selector {
 
     $(selector) {
         let descendants = this.elements.flatMap(el => Array.from(el.querySelectorAll(selector)));
-        return new Selector(descendants);
+        return new jSelector(descendants);
     }
 }
 
 function $(selector) {
-    const wrapper = new Selector(selector);
+    const wrapper = new jSelector(selector);
     return new Proxy(wrapper, {
         get(target, prop) {
             if (prop in target) return target[prop];

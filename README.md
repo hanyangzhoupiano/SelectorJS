@@ -1,13 +1,13 @@
-# SelectorJS
+# jSelector
 
-**SelectorJS** is a lightweight, chainable JavaScript utility for DOM manipulation — inspired by jQuery, built for modern vanilla JavaScript. Clean syntax, no dependencies.
+**jSelector** is a lightweight, chainable utility for DOM manipulation inspired by jQuery, built for modern vanilla JavaScript.
 
-## How to Use SelectorJS
+## How to Use jSelector
 
 To use SelectorJS in your code, include it via CDN:
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/selectorjs@1.0.0/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jselector@1.0.0/main.js"></script>
 ```
 
 ## Documentation
