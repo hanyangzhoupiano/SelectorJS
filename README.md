@@ -4,7 +4,7 @@
 
 ## How to Use jSelector
 
-To use SelectorJS in your code, include it via CDN:
+To use jSelector in your code, include it via CDN:
 
 ```html
 <script src="https://cdn.jsdelivr.net/npm/jselector@1.0.0/main.js"></script>
