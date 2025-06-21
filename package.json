@@ -1,5 +1,5 @@
 {
-  "name": "@hanyangzhou/jselector",
+  "name": "jselector",
   "title": "jSelector",
   "version": "1.0.0",
   "description": "A lightweight, chainable JavaScript utility for DOM selection and manipulation.",
