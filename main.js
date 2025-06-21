@@ -1,4 +1,4 @@
-class $Wrapper {
+class Selector {
     constructor(input) {
         if (typeof input === "string") {
             this.elements = Array.from(document.querySelectorAll(input));
@@ -72,12 +72,12 @@ class $Wrapper {
 
     $(selector) {
         let descendants = this.elements.flatMap(el => Array.from(el.querySelectorAll(selector)));
-        return new $Wrapper(descendants);
+        return new Selector(descendants);
     }
 }
 
 function $(selector) {
-    const wrapper = new $Wrapper(selector);
+    const wrapper = new Selector(selector);
     return new Proxy(wrapper, {
         get(target, prop) {
             if (prop in target) return target[prop];
